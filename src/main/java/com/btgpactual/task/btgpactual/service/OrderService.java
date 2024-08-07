@@ -5,22 +5,16 @@ import com.btgpactual.task.btgpactual.dto.OrderResponse;
 import com.btgpactual.task.btgpactual.entity.OrderEntity;
 import com.btgpactual.task.btgpactual.entity.OrderItems;
 import com.btgpactual.task.btgpactual.repository.OrderRepository;
-import org.bson.Document;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-
-import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
 
 @Service
 public class OrderService {
 
     private final OrderRepository orderRepository;
-    private MongoTemplate mongoTemplate;
 
 
     public OrderService(OrderRepository orderRepository) {
